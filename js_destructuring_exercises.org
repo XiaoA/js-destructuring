@@ -17,3 +17,19 @@ What does the following code return/print?
   console.log(numPlanets);  // 8
   console.log(yearNeptuneDiscovered);  // 1846
 #+end_src
+
+** Object Destructuring 2
+
+What does the following code return/print?
+
+#+begin_src js :tangle obj.destruct_2.js
+  let planetFacts = {
+    numPlanets: 8,
+    yearNeptuneDiscovered: 1846,
+    yearMarsDiscovered: 1659
+  };
+
+  let { numPlanets, ...discoveryYears } = planetFacts;
+
+  console.log(discoveryYears); // {yearMarsDiscovered: 1659, yearNeptuneDiscovered: 1846}
+#+end_src
