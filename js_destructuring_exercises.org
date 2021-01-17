@@ -61,3 +61,13 @@ What does the following code return/print?
 
   const {a, b} = obj.numbers;
 #+end_src
+
+** ES5 Array Swap
+
+#+begin_src js :tangle array_swap.js
+  var arr = [1, 2];
+  var temp = arr[0];
+
+  arr[0] = arr[1];
+  arr[1] = temp;
+#+end_src
