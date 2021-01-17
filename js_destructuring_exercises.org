@@ -71,3 +71,9 @@ What does the following code return/print?
   arr[0] = arr[1];
   arr[1] = temp;
 #+end_src
+
+** ES2015 One-Line Array Swap with Destructuring
+#+begin_src js :tangle one_liner.js
+  // Pattern Matching FTW!
+  [arr[0], arr[1] = arr[1], arr[0]]
+#+end_src
