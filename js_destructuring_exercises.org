@@ -38,7 +38,7 @@ What does the following code return/print?
 
 What does the following code return/print?
 
-#+begin_src js :tangle obj_destruct_3.js
+#+begin_src js :tangle obnj_destruct_3.js
   function getUserData({ firstName, favoriteColor = "green" }){
     return `Your name is ${ firstName } and you like ${ favoriteColor }`;
   }
@@ -47,4 +47,14 @@ What does the following code return/print?
   getUserData ({ firstName: "Melissa" })  // "Your name is Melissa and you like green"
   "green" }
   getUserData ({})  // "Your name is undefined and you like green"
+#+end_src
+
+** Array Destructuring 1
+What does the following code return/print?
+#+begin_src js :tangle array_destruct_1.js
+  let [first, second, third]  =  ["Maya", "Marisa", "Chi"];
+
+  console.log(first); // "Maya"
+  console.log(second); // "Marisa"
+  console.log(third); // "Chi"
 #+end_src
