@@ -33,3 +33,18 @@ What does the following code return/print?
 
   console.log(discoveryYears); // {yearMarsDiscovered: 1659, yearNeptuneDiscovered: 1846}
 #+end_src
+
+** Object Destructuring 3
+
+What does the following code return/print?
+
+#+begin_src js :tangle obj_destruct_3.js
+  function getUserData({ firstName, favoriteColor = "green" }){
+    return `Your name is ${ firstName } and you like ${ favoriteColor }`;
+  }
+
+  getUserData ({ firstName: "Alejandro", favoriteColor: "purple" }) // "Your name is Alejandro and you like purple" 
+  getUserData ({ firstName: "Melissa" })  // "Your name is Melissa and you like green"
+  "green" }
+  getUserData ({})  // "Your name is undefined and you like green"
+#+end_src
