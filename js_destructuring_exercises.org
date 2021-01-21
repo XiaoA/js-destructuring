@@ -38,7 +38,7 @@ What does the following code return/print?
 
 What does the following code return/print?
 
-#+begin_src js :tangle obnj_destruct_3.js
+#+begin_src js :tangle obj_destruct_3.js
   function getUserData({ firstName, favoriteColor = "green" }){
     return `Your name is ${ firstName } and you like ${ favoriteColor }`;
   }
@@ -57,4 +57,22 @@ What does the following code return/print?
   console.log(first); // "Maya"
   console.log(second); // "Marisa"
   console.log(third); // "Chi"
+#+end_src
+
+** Array Destructuring 2
+
+What does the following code return/print?
+
+#+begin_src js :tangle array_destruct_2.js
+  let [raindrops, whiskers, ...aFewOfMyFavoriteThings] = [
+    "Raindrops on roses",
+    "whiskers on kittens",
+    "Bright copper kettles",
+    "warm woolen mittens",
+    "Brown paper packages tied up with strings"
+  ]
+
+  console.log(raindrops); // "Raindrops on roses"
+  console.log(whiskers); // "whiskers on kittens"
+  console.log(aFewOfMyFavoriteThings); // ["Bright copper kettles", "warm woolen mittens", "Brown paper packages tied up with strings"]
 #+end_src
