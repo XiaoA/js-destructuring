@@ -1,0 +1,35 @@
+#+Title: JS Destructuring Exercises
+#+AUTHOR: Andrew Buckingham
+#+STARTUP: indent
+#+OPTIONS: num:nil toc:nil ^:nil
+#+FILETAGS: :springboard:
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-dark.min.css" />
+
+** Object Destructuring 1
+
+What does the following code return/print?
+
+#+begin_src js :tangle obj_destruct_1.js
+
+  let facts = { numPlanets: 8, yearNeptuneDiscovered: 1846 };
+  let { numPlanets, yearNeptuneDiscovered } = facts ;
+
+  console.log(numPlanets);  // 8
+  console.log(yearNeptuneDiscovered);  // 1846
+#+end_src
+
+** Object Destructuring 2
+
+What does the following code return/print?
+
+#+begin_src js :tangle obj.destruct_2.js
+  let planetFacts = {
+    numPlanets: 8,
+    yearNeptuneDiscovered: 1846,
+    yearMarsDiscovered: 1659
+  };
+
+  let { numPlanets, ...discoveryYears } = planetFacts;
+
+  console.log(discoveryYears); // {yearMarsDiscovered: 1659, yearNeptuneDiscovered: 1846}
+#+end_src
