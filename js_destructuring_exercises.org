@@ -110,3 +110,60 @@ Write a function called raceResults which accepts a single array argument. It sh
       }
     ,*/
   #+end_src
+
+** Array Destructuring 1
+What does the following code return/print?
+#+begin_src js :tangle array_destruct_1.js
+  let [first, second, third]  =  ["Maya", "Marisa", "Chi"];
+
+  console.log(first); // "Maya"
+  console.log(second); // "Marisa"
+  console.log(third); // "Chi"
+#+end_src
+
+** Array Destructuring 2
+
+What does the following code return/print?
+
+#+begin_src js :tangle array_destruct_2.js
+  let [raindrops, whiskers, ...aFewOfMyFavoriteThings] = [
+    "Raindrops on roses",
+    "whiskers on kittens",
+    "Bright copper kettles",
+    "warm woolen mittens",
+    "Brown paper packages tied up with strings"
+  ]
+
+  console.log(raindrops); // "Raindrops on roses"
+  console.log(whiskers); // "whiskers on kittens"
+  console.log(aFewOfMyFavoriteThings); // ["Bright copper kettles", "warm woolen mittens", "Brown paper packages tied up with strings"]
+#+end_src
+
+** Array Destructuring 3
+
+What does the following code return/print?
+
+#+begin_src js :tangle array_destruct_3.js
+  let numbers = [10, 20, 30];
+  [numbers[1], numbers[2]] = [numbers[2], numbers[1]]
+
+  console.log(numbers)  // [10, 30, 20]
+#+end_src
+
+* ES2015 Refactoring
+
+In this exercise, you'll refactor some ES5 code into ES2015.
+
+** ES5 Assigning Variables to Object Properties
+
+#+begin_src js :tangle obj_props.js
+  var obj = {
+    numbers: {
+      a: 1,
+      b: 2
+    }
+  };
+
+  var a = obj.numbers.a;
+  var b = obj.numbers.b;
+#+end_src
