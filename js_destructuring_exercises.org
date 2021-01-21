@@ -76,3 +76,14 @@ What does the following code return/print?
   console.log(whiskers); // "whiskers on kittens"
   console.log(aFewOfMyFavoriteThings); // ["Bright copper kettles", "warm woolen mittens", "Brown paper packages tied up with strings"]
 #+end_src
+
+** Array Destructuring 3
+
+What does the following code return/print?
+
+#+begin_src js :tangle array_destruct_3.js
+  let numbers = [10, 20, 30];
+  [numbers[1], numbers[2]] = [numbers[2], numbers[1]]
+
+  console.log(numbers)  // [10, 30, 20]
+#+end_src
