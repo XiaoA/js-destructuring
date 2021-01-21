@@ -87,3 +87,21 @@ What does the following code return/print?
 
   console.log(numbers)  // [10, 30, 20]
 #+end_src
+
+* ES2015 Refactoring
+
+In this exercise, you'll refactor some ES5 code into ES2015.
+
+** ES5 Assigning Variables to Object Properties
+
+#+begin_src js :tangle obj_props.js
+  var obj = {
+    numbers: {
+      a: 1,
+      b: 2
+    }
+  };
+
+  var a = obj.numbers.a;
+  var b = obj.numbers.b;
+#+end_src
